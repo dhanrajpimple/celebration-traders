@@ -1,8 +1,8 @@
 import { Link, useLocation } from "@remix-run/react"
 import { useEffect, useRef, useState } from "react"
-import fourth from "../assests/12 chanel.png"
-import fifth from "../assests/co2.png"
-import sixth from "../assests/fog.png"
+import fourth from "../assests/12chane.jpeg"
+import fifth from "../assests/co.jpeg"
+import sixth from "../assests/fo.jpeg"
 
 export default function ProductDetails() {
   const [visibleSections, setVisibleSections] = useState<number[]>([])

@@ -42,18 +42,11 @@ import img31 from "../assests/31.jpg";
 import img32 from "../assests/32.jpg";
 import img33 from "../assests/33.jpg";
 import img34 from "../assests/34.jpg";
-import img35 from "../assests/35.jpg";
-import imgCo2 from "../assests/co2.png";
-import img12Chanel from "../assests/12 chanel.png";
-import imgFog from "../assests/fog.png";
-import imgSparkular from "../assests/sparkular.png";
-import imgConfetti from "../assests/confetti.png";
-import imgAnn from "../assests/ann.jpg";
-import imgEvent from "../assests/event.jpg";
-import imgFettival from "../assests/fettival.jpg";
-import imgParty from "../assests/party.jpg";
-import imgWedd from "../assests/wedd.jpg";
-import imgEng from "../assests/eng.jpg";
+import imgCo2 from "../assests/co.jpeg";
+import img12Chanel from "../assests/12chane.jpeg";
+import imgFog from "../assests/fo.jpeg";
+import imgSparkular from "../assests/sparkula.jpeg";
+import imgConfetti from "../assests/confett.jpeg";
 export default function ProductsPage() {
   const [isVisible, setIsVisible] = useState(false)
   const [filter, setFilter] = useState("all")

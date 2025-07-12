@@ -1,9 +1,9 @@
 
 import { useEffect, useRef, useState } from "react"
 import { Link, useLocation } from "@remix-run/react"
-import first from "../assests/12 chanel.png"
-import second from "../assests/co2.png"
-import third from "../assests/sparkular.png"
+import first from "../assests/12chane.jpeg"
+import second from "../assests/co.jpeg"
+import third from "../assests/sparkula.jpeg"
 
 export default function ProductShowcase() {
   const [isVisible, setIsVisible] = useState(false)

@@ -4,9 +4,7 @@ import FAQ from "~/components/FAQ";
 import Footer from "~/components/Footer";
 import Header from "~/components/Header";
 import Hero from "~/components/Hero";
-import ProductsAndServices from "~/components/ProductAndServices";
 import ProductDetails from "~/components/ProductDetails";
-import ProductFeatures from "~/components/ProductFeatures";
 import ProductShowcase from "~/components/ProductShowcase";
 import WhyChooseUs from "~/components/WhyChooseUs";
 
