@@ -34,7 +34,7 @@ export default function About() {
           <h2
             className={`text-4xl font-bold text-gray-900 mb-4 transition-all duration-700 delay-200 ${isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"} font-heading`}
           >
-           Your Trusted Firecracker & Celebration Material Supplier in Satara
+           Your Trusted Celebration Material Supplier in Satara
           </h2>
           <div
             className={`w-24 h-1 bg-red-600 mx-auto transition-all duration-700 delay-400 ${isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"}`}

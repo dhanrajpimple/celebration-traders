@@ -48,12 +48,12 @@ export default function Hero() {
           <h1
             className={`text-6xl md:text-8xl font-bold mb-6 tracking-wider transition-all duration-1000 delay-300 ${isLoaded ? "animate-fade-in-up" : "opacity-0"} font-heading`}
           >
-            Celebration Traders
+           A. P. Celebration Traders
           </h1>
           <p
             className={`text-xl md:text-2xl font-light tracking-wide max-w-2xl mx-auto transition-all duration-1000 delay-500 ${isLoaded ? "animate-fade-in-up" : "opacity-0"} font-text`}
           >
-            Wholesale Crackers & All Celebration Materials Available
+            Wholesale Birthday Products, SFX, Decorations, and All Celebration Materials Available
           </p>
           <div
             className={`mt-8 transition-all duration-1000 delay-700 ${isLoaded ? "animate-fade-in-up" : "opacity-0"}`}

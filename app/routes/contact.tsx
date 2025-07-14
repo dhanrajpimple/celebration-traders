@@ -145,7 +145,7 @@ export default function ContactPage() {
                 Mail Us:
               </h3>
               <p className="text-gray-600 hover:text-gray-800 transition-colors duration-300 font-text">
-                apcelebrationtrader@gmail.com
+              apcelebrationtrender01@gmail.com
               </p>
             </div>
 
@@ -166,7 +166,7 @@ export default function ContactPage() {
                 Location:
               </h3>
               <p className="text-gray-600 hover:text-gray-800 transition-colors duration-300 font-text">
-                Shop No. 1, Near XYZ Chowk, Satara, Maharashtra 415001
+                Shop No. 5, Near chakor bakery, phutka talav somvar peth Satara, Maharashtra 415001
               </p>
             </div>
           </div>

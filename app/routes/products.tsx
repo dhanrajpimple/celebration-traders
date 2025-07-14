@@ -95,30 +95,6 @@ export default function ProductsPage() {
       description: "Professional corporate event management with premium services",
       features: ["Stage Setup", "Audio Visual", "Corporate Branding", "Catering Coordination"],
       price: "Starting ₹25,000"
-    },
-    {
-      id: 4,
-      name: "Festival Celebrations",
-      image: festival,
-      description: "Traditional festival celebrations with authentic decorations and arrangements",
-      features: ["Traditional Decor", "Cultural Setup", "Religious Arrangements", "Community Events"],
-      price: "Starting ₹20,000"
-    },
-    {
-      id: 5,
-      name: "Anniversary Parties",
-      image: aniversery,
-      description: "Romantic and elegant anniversary celebration packages",
-      features: ["Romantic Decor", "Ambient Lighting", "Floral Arrangements", "Memory Displays"],
-      price: "Starting ₹18,000"
-    },
-    {
-      id: 6,
-      name: "Engagement Ceremonies",
-      image: eng,
-      description: "Beautiful engagement ceremony setups with modern and traditional elements",
-      features: ["Ring Ceremony Setup", "Floral Decorations", "Photography Corner", "Guest Arrangements"],
-      price: "Starting ₹30,000"
     }
   ]
 
