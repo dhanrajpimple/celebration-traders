@@ -4,45 +4,32 @@ import Footer from "~/components/Footer"
 import { Link } from "@remix-run/react"
 import video from "../assests/bg.mp4"
 import event from "../assests/event.jpg"
-import eng from "../assests/eng.jpg"
+import one from "../assests/1.png"
+import second from "../assests/2.png"
+import third from "../assests/3.png"
+import fourth from "../assests/4.png"
+import five from "../assests/5.png"
+import six from "../assests/6.png"
 import party from "../assests/party.jpg"
 import wedding from "../assests/wedd.jpg"
-import aniversery from "../assests/ann.jpg"
-import festival from "../assests/fettival.jpg"
-import img1 from "../assests/1.jpg";
-import img2 from "../assests/2.jpg";
-import img3 from "../assests/3.jpg";
-import img4 from "../assests/4.jpg";
-import img5 from "../assests/5.jpg";
-import img6 from "../assests/6.jpg";
-import img7 from "../assests/7.jpg";
-import img8 from "../assests/8.jpg";
-import img9 from "../assests/9.jpg";
-import img10 from "../assests/10.jpg";
-import img11 from "../assests/11.jpg";
 import img12 from "../assests/12.jpg";
-import img13 from "../assests/13.jpg";
 import img14 from "../assests/14.jpg";
 import img15 from "../assests/15.jpg";
 import img16 from "../assests/16.jpg";
-import img17 from "../assests/17.jpg";
-import img18 from "../assests/18.jpg";
-import img19 from "../assests/19.jpg";
-import img20 from "../assests/20.jpg";
 import img21 from "../assests/21.jpg";
-import img22 from "../assests/22.jpg";
-import img23 from "../assests/23.jpg";
-import img24 from "../assests/24.jpg";
 import img25 from "../assests/25.jpg";
 import img26 from "../assests/26.jpg";
-import img28 from "../assests/28.jpg";
 import img29 from "../assests/29.jpg";
 import img30 from "../assests/30.jpg";
-import img31 from "../assests/31.jpg";
 import img32 from "../assests/32.jpg";
-import img33 from "../assests/33.jpg";
 import img34 from "../assests/34.jpg";
 import imgCo2 from "../assests/co.jpeg";
+import baner from "../assests/Banner.png"
+import seasonal from "../assests/SeaSonal Products.png"
+import premimum from "../assests/Premium Kits.png"
+import caps from '../assests/Birthday Caps.png'
+import eyeMask from "../assests/Eye Mask.png"
+
 import img12Chanel from "../assests/12chane.jpeg";
 import imgFog from "../assests/fo.jpeg";
 import imgSparkular from "../assests/sparkula.jpeg";
@@ -74,70 +61,66 @@ export default function ProductsPage() {
   const celebrationServices = [
     {
       id: 1,
-      name: "Birthday Party Booking",
+      name: "Birthday Party Supplies & Equipment",
       image: party,
-      description: "Complete birthday celebration packages with decorations, lighting, and entertainment",
-      features: ["Custom Decorations", "Lighting Setup", "Entertainment", "Photography"],
-      price: "Starting ₹15,000"
+      description: "Complete birthday party supply packages with decorations, lighting equipment, and entertainment systems for rent or purchase",
+      features: ["Decoration Packages", "Lighting Equipment Rental", "Sound System Rental", "Photo Booth Setup"],
+      price: "Starting ₹5,000"
     },
     {
       id: 2,
-      name: "Wedding Celebration",
+      name: "Wedding Decoration & Equipment",
       image: wedding,
-      description: "Grand wedding ceremonies with traditional and modern celebration elements",
-      features: ["Mandap Decoration", "Fireworks Display", "LED Lighting", "Sound System"],
-      price: "Starting ₹50,000"
+      description: "Premium wedding supplies including All types of materials, lighting systems, and ceremonial equipment",
+      features: ["Mandap Setup Materials", "Fireworks & Crackers", "LED Lighting Systems", "Professional Sound Equipment"],
+      price: "Starting ₹20,000"
     },
     {
       id: 3,
-      name: "Corporate Events",
+      name: "Corporate Event Solutions",
       image: event,
-      description: "Professional corporate event management with premium services",
-      features: ["Stage Setup", "Audio Visual", "Corporate Branding", "Catering Coordination"],
-      price: "Starting ₹25,000"
+      description: "Professional event equipment and branding materials for corporate functions and conferences",
+      features: ["Stage & Backdrop Materials", "AV Equipment Rental", "Corporate Branding Supplies", "Furniture & Seating"],
+      price: "Starting ₹10,000"
     }
   ]
-
   // Array of all product images and names
   const allProductImages = [
-    { src: img1, name: "1" },
-    { src: img2, name: "2" },
-    { src: img3, name: "3" },
-    { src: img4, name: "4" },
-    { src: img5, name: "5" },
-    { src: img6, name: "6" },
-    { src: img7, name: "7" },
-    { src: img8, name: "8" },
-    { src: img9, name: "9" },
-    { src: img10, name: "10" },
-    { src: img11, name: "11" },
-    { src: img12, name: "12" },
-    { src: img13, name: "13" },
-    { src: img14, name: "14" },
-    { src: img15, name: "15" },
-    { src: img16, name: "16" },
-    { src: img17, name: "17" },
-    { src: img18, name: "18" },
-    { src: img19, name: "19" },
-    { src: img20, name: "20" },
-    { src: img21, name: "21" },
-    { src: img22, name: "22" },
-    { src: img23, name: "23" },
-    { src: img24, name: "24" },
-    { src: img25, name: "25" },
-    { src: img26, name: "26" },
-    { src: img28, name: "28" },
-    { src: img29, name: "29" },
-    { src: img30, name: "30" },
-    { src: img31, name: "31" },
-    { src: img32, name: "32" },
-    { src: img33, name: "33" },
-    { src: img34, name: "34" },
-    { src: imgCo2, name: "co2" },
-    { src: img12Chanel, name: "12 chanel" },
-    { src: imgFog, name: "fog" },
-    { src: imgSparkular, name: "sparkular" },
-    { src: imgConfetti, name: "confetti" }
+
+
+    { src: img12, name: "Plastic Crowns" },
+
+    { src: img14, name: "Color Smoke Cannons" },
+    { src: img15, name: "Silver Fountains" },
+    { src: img16, name: "Color Smoke (cylinders)" },
+
+    { src: img21, name: "Cold Pyro firing machine" },
+
+    { src: img25, name: "Cold Pyro stands" },
+    { src: img26, name: "Assorted Cold Pyro products" },
+
+    { src: img29, name: "Ferrari Cold Pyro" },
+    { src: img30, name: "Cold Pyro firing system with remote control" },
+
+    { src: img32, name: "12-channel Cold Pyro firing machine" },
+
+    { src: img34, name: "Cash Cannon" },
+    { src: imgCo2, name: "CO2 Jet Machine" },
+    { src: img12Chanel, name: "12-Channel Cold Pyro" },
+    { src: imgFog, name: "Bubble Fog Machines" },
+    { src: imgSparkular, name: "Sparkular Guns" },
+    { src: imgConfetti, name: "Confetti Blaster" },
+    { src: one, name: "Indian Currency Note Gloss" },
+    { src: second, name: "Party Ballons" },
+    { src: third, name: "Hangers" },
+    { src: fourth, name: "Party Popper" },
+    { src: five, name: "Cake Toppers" },
+    { src: six, name: "Dangler 3d ButterFly" },
+    { src: baner, name: "Banners" },
+    { src: seasonal, name: "Seasonal Products" },
+    { src: premimum, name: "Premimum Kits" },
+    { src: eyeMask, name: "Eye Masks" },
+    { src: caps, name: "Birthday Caps" },
   ];
 
   return (
