@@ -48,11 +48,9 @@ export const action: ActionFunction = async ({ request }) => {
   }
 
   // Send to API - Fixed API call
-  const apiBase = process.env.PUBLIC_API_BASE_URL;
+  const apiBase = "https://formspree.io/f/xjkogqky"
   
-  console.log('API Base URL:', apiBase); // Debug log
-  console.log('Sending data:', { fullName, email, contactNumber, message }); // Debug log
-  
+
   if (!apiBase) {
     console.error('PUBLIC_API_BASE_URL environment variable is not set');
     return json({ error: "Server configuration error. Please contact support." }, { status: 500 });
