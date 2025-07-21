@@ -14,6 +14,10 @@ export const loader: LoaderFunction = async ({ request }) => {
   return json({ alreadySubmitted: !!cookies.contactSubmitted });
 };
 
+
+
+
+
 export const action: ActionFunction = async ({ request }) => {
   const cookie = request.headers.get("Cookie") || "";
   const cookies = parse(cookie);
