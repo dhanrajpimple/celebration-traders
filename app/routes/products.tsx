@@ -158,7 +158,7 @@ export default function ProductsPage() {
 
         <div className="relative z-10 flex items-center justify-center h-full">
           <div className="text-center text-white px-4">
-            <h1 className="text-6xl md:text-7xl font-bold tracking-wider animate-fade-in-up font-heading">Services & Products</h1>
+            <h1 className="text-2xl md:text-6xl font-bold tracking-wider animate-fade-in-up font-heading">Trusted Wholesale Birthday Products, SFX Items, and Decoration Materials</h1>
             <div className="w-24 h-1 bg-red-600 mx-auto mt-4 animate-fade-in-up stagger-2"></div>
           </div>
         </div>
