@@ -3,103 +3,8 @@ import type React from "react"
 import Header from "~/components/Header"
 import Footer from "~/components/Footer"
 import video from "../assests/bg.mp4"
-import { json, type LoaderFunction, type ActionFunction } from "@remix-run/node";
-import { useFetcher, useLoaderData } from "@remix-run/react";
-import { parse } from "cookie";
-
-export const loader: LoaderFunction = async ({ request }) => {
-  // Check for cookie to disable form if already submitted
-  const cookie = request.headers.get("Cookie") || "";
-  const cookies = parse(cookie);
-  return json({ alreadySubmitted: !!cookies.contactSubmitted });
-};
-
-
-
-
-
-export const action: ActionFunction = async ({ request }) => {
-  const cookie = request.headers.get("Cookie") || "";
-  const cookies = parse(cookie);
-  
-  if (cookies.contactSubmitted) {
-    return json({ error: "You have already submitted the form from this device." }, { status: 400 });
-  }
-  
-  const formData = await request.formData();
-  const fullName = formData.get("fullName")?.toString() || "";
-  const email = formData.get("email")?.toString() || "";
-  const contactNumber = formData.get("contactNumber")?.toString() || "";
-  const message = formData.get("message")?.toString() || "";
-
-  // Server-side validation
-  const errors: Record<string, string> = {};
-  if (!/^[A-Za-z ]{2,50}$/.test(fullName)) {
-    errors.fullName = "Name must be 2-50 letters and spaces only.";
-  }
-  if (!/^\+91[6-9][0-9]{9}$/.test(contactNumber)) {
-    errors.contactNumber = "Enter a valid Indian phone number (e.g. +919876543210).";
-  }
-  if (!/^([a-zA-Z0-9_.+-]+)@gmail\.com$/.test(email)) {
-    errors.email = "Enter a valid Gmail address.";
-  }
-  if (!message || message.length < 5) {
-    errors.message = "Message is required (min 5 chars).";
-  }
-  
-  if (Object.keys(errors).length > 0) {
-    return json({ errors }, { status: 400 });
-  }
-
-  // Send to API - Fixed API call
-  const apiBase = "https://formspree.io/f/xjkogqky"
-  
-
-  if (!apiBase) {
-    console.error('PUBLIC_API_BASE_URL environment variable is not set');
-    return json({ error: "Server configuration error. Please contact support." }, { status: 500 });
-  }
-  
-  try {
-    const apiUrl = `${apiBase}`;
-    console.log('Full API URL:', apiUrl); // Debug log
-    
-    const res = await fetch(apiUrl, {
-      method: "POST",
-      headers: { 
-        "Content-Type": "application/json",
-        "Accept": "application/json" // Add Accept header
-      },
-      body: JSON.stringify({ fullName, email, contactNumber, message }),
-    });
-    
-    console.log('API Response status:', res.status); // Debug log
-    
-    if (!res.ok) {
-      const errorText = await res.text();
-      console.error('API Error Response:', errorText);
-      return json({ error: `Failed to send message. Server responded with: ${res.status}` }, { status: 500 });
-    }
-    
-    const responseData = await res.json();
-    console.log('API Success Response:', responseData); // Debug log
-    
-  } catch (error) {
-    console.error('API Request Error:', error);
-    return json({ error: "Failed to send message. Network error occurred." }, { status: 500 });
-  }
-
-  // Set cookie so user can't submit again
-  return json({ success: true }, {
-    headers: {
-      "Set-Cookie": `contactSubmitted=true; Path=/; Max-Age=31536000; HttpOnly`,
-    },
-  });
-};
 
 export default function ContactPage() {
-  const { alreadySubmitted } = useLoaderData<{ alreadySubmitted: boolean }>();
-  const fetcher = useFetcher();
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -145,47 +50,23 @@ export default function ContactPage() {
     return errors;
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFormErrors({});
     setShowSuccess(false);
-    
     const errors = validate();
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
       return;
     }
-    
     setIsSubmitting(true);
-    
-    // Create FormData object for submission
-    const submitData = new FormData();
-    submitData.append('fullName', formData.fullName);
-    submitData.append('email', formData.email);
-    submitData.append('contactNumber', formData.contactNumber);
-    submitData.append('message', formData.message);
-    
-    fetcher.submit(submitData, { method: "post" });
+    // Submit directly to Formspree
+    const form = e.target as HTMLFormElement;
+    form.submit();
+    setShowSuccess(true);
+    setIsSubmitting(false);
+    setFormData({ fullName: "", email: "", contactNumber: "", message: "" });
   };
-
-  // Handle fetcher state changes
-  useEffect(() => {
-    const data = fetcher.data as any;
-    
-    if (data?.errors) {
-      setFormErrors(data.errors);
-      setIsSubmitting(false);
-    } else if (data?.success) {
-      setFormData({ fullName: "", email: "", contactNumber: "", message: "" });
-      setIsSubmitting(false);
-      setShowSuccess(true);
-      // Hide success message after 5 seconds
-      setTimeout(() => setShowSuccess(false), 5000);
-    } else if (data?.error) {
-      setFormErrors({ general: data.error });
-      setIsSubmitting(false);
-    }
-  }, [fetcher.data]);
 
   // Handle input changes
   const handleInputChange = (field: string, value: string) => {
@@ -370,8 +251,12 @@ export default function ContactPage() {
                   </div>
                 </div>
               )}
-              
-              <fetcher.Form method="post" className="space-y-6" onSubmit={handleSubmit}>
+              <form
+                action="https://formspree.io/f/xjkogqky"
+                method="POST"
+                className="space-y-6"
+                onSubmit={handleSubmit}
+              >
                 <div className="relative">
                   <input
                     type="text"
@@ -383,11 +268,10 @@ export default function ContactPage() {
                       formErrors.fullName ? 'border-red-500' : 'border-gray-300'
                     }`}
                     required
-                    disabled={isSubmitting || alreadySubmitted}
+                    disabled={isSubmitting}
                   />
                   {formErrors.fullName && <p className="text-red-600 text-sm mt-1">{formErrors.fullName}</p>}
                 </div>
-                
                 <div className="relative">
                   <input
                     type="email"
@@ -399,11 +283,10 @@ export default function ContactPage() {
                       formErrors.email ? 'border-red-500' : 'border-gray-300'
                     }`}
                     required
-                    disabled={isSubmitting || alreadySubmitted}
+                    disabled={isSubmitting}
                   />
                   {formErrors.email && <p className="text-red-600 text-sm mt-1">{formErrors.email}</p>}
                 </div>
-                
                 <div className="relative">
                   <input
                     type="tel"
@@ -415,11 +298,10 @@ export default function ContactPage() {
                       formErrors.contactNumber ? 'border-red-500' : 'border-gray-300'
                     }`}
                     required
-                    disabled={isSubmitting || alreadySubmitted}
+                    disabled={isSubmitting}
                   />
                   {formErrors.contactNumber && <p className="text-red-600 text-sm mt-1">{formErrors.contactNumber}</p>}
                 </div>
-                
                 <div className="relative">
                   <textarea
                     name="message"
@@ -431,20 +313,13 @@ export default function ContactPage() {
                       formErrors.message ? 'border-red-500' : 'border-gray-300'
                     }`}
                     required
-                    disabled={isSubmitting || alreadySubmitted}
+                    disabled={isSubmitting}
                   />
                   {formErrors.message && <p className="text-red-600 text-sm mt-1">{formErrors.message}</p>}
                 </div>
-                
-                {formErrors.general && (
-                  <div className="p-3 bg-red-100 border border-red-400 text-red-700 rounded-lg">
-                    {formErrors.general}
-                  </div>
-                )}
-                
                 <button
                   type="submit"
-                  disabled={isSubmitting || alreadySubmitted}
+                  disabled={isSubmitting}
                   className="bg-red-600 hover:bg-red-700 disabled:bg-red-400 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover-glow disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
                   {isSubmitting ? (
@@ -472,10 +347,10 @@ export default function ContactPage() {
                       Submitting<span className="loading-dots"></span>
                     </span>
                   ) : (
-                    alreadySubmitted ? "Already Submitted" : "Submit"
+                    "Submit"
                   )}
                 </button>
-              </fetcher.Form>
+              </form>
             </div>
           </div>
         </div>
