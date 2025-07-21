@@ -47,7 +47,7 @@ export default function About() {
             className={`transition-all duration-700 delay-300 ${isVisible ? "animate-fade-in-left" : "opacity-0 -translate-x-8"}`}
           >
             <p className="text-gray-700 leading-relaxed mb-6 hover:text-gray-900 transition-colors duration-300 font-text">
-              AP Celebration Trader is your trusted wholesaler for firecrackers and all kinds of celebration materials, proudly serving Satara and nearby cities. We are dedicated to making every celebration brighter, safer, and more memorable with our wide selection of quality products.
+              AP Celebration Trader is your trusted wholesaler for Birthday Products and all kinds of celebration materials, proudly serving Satara and nearby cities. We are dedicated to making every celebration brighter, safer, and more memorable with our wide selection of quality products.
             </p>
             <p className="text-gray-700 leading-relaxed mb-6 hover:text-gray-900 transition-colors duration-300 font-text">
               From traditional firecrackers to modern party supplies, we offer everything you need for festivals, weddings, and special occasions. Our commitment to quality and customer satisfaction has made us a preferred choice for individuals and event organizers across the region.
