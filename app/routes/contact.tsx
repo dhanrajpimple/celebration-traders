@@ -3,6 +3,144 @@ import type React from "react"
 import Header from "~/components/Header"
 import Footer from "~/components/Footer"
 import video from "../assests/bg.mp4"
+import type { MetaFunction } from "@remix-run/cloudflare";
+
+export const meta: MetaFunction = () => {
+  return [
+    // Basic Meta Tags
+    { title: "Contact A.P. Celebration Traders - Call +919359604441 | Fireworks & Party Supplies Store in Satara" },
+    { name: "description", content: "Contact A.P. Celebration Traders for firecrackers, cold pyro machines & party supplies. Call +919359604441, WhatsApp, or visit our Satara store near Chakor Bakery. Get quotes for celebration materials today!" },
+    
+    // SEO Keywords
+    { name: "keywords", content: "contact AP Celebration Traders, fireworks store contact Satara, celebration materials shop phone number, party supplies store location, cold pyro machine booking contact, wedding decoration contact, birthday party supplies contact, corporate event equipment contact, fireworks dealer phone number, celebration materials quote, party equipment rental contact, CO2 jet machine booking, sparkular guns rental contact, confetti blaster booking, bubble fog machine contact, cash cannon rental phone, Satara fireworks store address, somvar peth celebration shop, chakor bakery fireworks store, Maharashtra party supplies contact" },
+    
+    // Open Graph Tags
+    { property: "og:title", content: "Contact A.P. Celebration Traders - Fireworks & Party Supplies Store Satara" },
+    { property: "og:description", content: "Get in touch with Satara's trusted celebration materials supplier. Call +919359604441 for firecrackers, cold pyro systems & party supplies. Visit our store or get quotes online!" },
+    { property: "og:type", content: "website" },
+    { property: "og:url", content: "https://apcelebrationtraders.com/contact" },
+    { property: "og:image", content: "https://apcelebrationtraders.com/images/contact-ap-celebration-store.jpg" },
+    { property: "og:image:width", content: "1200" },
+    { property: "og:image:height", content: "630" },
+    { property: "og:site_name", content: "A.P. Celebration Traders" },
+    { property: "og:locale", content: "en_IN" },
+    
+    // Twitter Card Tags
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "Contact A.P. Celebration Traders - Call +919359604441" },
+    { name: "twitter:description", content: "Get in touch with Satara's trusted celebration materials supplier. Call for firecrackers, cold pyro systems & party supplies. Visit our store today!" },
+    { name: "twitter:image", content: "https://apcelebrationtraders.com/images/contact-ap-celebration-store.jpg" },
+    
+    // Additional SEO Tags
+    { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+    { name: "language", content: "en-IN" },
+    { name: "revisit-after", content: "7 days" },
+    { name: "author", content: "A.P. Celebration Traders" },
+    { name: "copyright", content: "A.P. Celebration Traders" },
+    { name: "distribution", content: "global" },
+    { name: "rating", content: "general" },
+    
+    // Geographic Tags (Enhanced for Contact Page)
+    { name: "geo.region", content: "IN-MH" },
+    { name: "geo.placename", content: "Satara, Maharashtra" },
+    { name: "geo.position", content: "17.6805;74.0183" },
+    { name: "ICBM", content: "17.6805, 74.0183" },
+    
+    // Primary Business Contact Information
+    { name: "business:contact_data:street_address", content: "Shop No. 5, Near chakor bakery, phutka talav somvar peth" },
+    { name: "business:contact_data:locality", content: "Satara" },
+    { name: "business:contact_data:region", content: "Maharashtra" },
+    { name: "business:contact_data:postal_code", content: "415001" },
+    { name: "business:contact_data:country_name", content: "India" },
+    { name: "business:contact_data:phone_number", content: "+919359604441" },
+    { name: "business:contact_data:email", content: "apcelebrationtrender01@gmail.com" },
+    
+    // Contact Methods
+    { name: "contact:phone", content: "+919359604441" },
+    { name: "contact:whatsapp", content: "+919359604441" },
+    { name: "contact:email", content: "apcelebrationtrender01@gmail.com" },
+    { name: "contact:address", content: "Shop No. 5, Near chakor bakery, phutka talav somvar peth, Satara, Maharashtra 415001" },
+    
+    // Store Information
+    { name: "store:location", content: "Near Chakor Bakery, Phutka Talav, Somvar Peth" },
+    { name: "store:landmark", content: "Chakor Bakery" },
+    { name: "store:area", content: "Somvar Peth" },
+    { name: "store:city", content: "Satara" },
+    { name: "store:state", content: "Maharashtra" },
+    { name: "store:pincode", content: "415001" },
+    
+    // Services Contact Information
+    { name: "service:booking", content: "Call +919359604441 for equipment booking" },
+    { name: "service:quotes", content: "Get quotes via phone, WhatsApp, or email" },
+    { name: "service:consultation", content: "Free consultation for celebration planning" },
+    { name: "service:delivery", content: "Delivery available in Satara and nearby areas" },
+    
+    // Local Business Tags
+    { name: "local-business-type", content: "Fireworks and Celebration Materials Store" },
+    { name: "local-business-category", content: "Party Supplies, Celebration Materials, Event Equipment" },
+    { name: "business-hours-note", content: "Contact for current business hours" },
+    
+    // Mobile Optimization
+    { name: "viewport", content: "width=device-width, initial-scale=1, shrink-to-fit=no" },
+    { name: "format-detection", content: "telephone=yes" },
+    { name: "mobile-web-app-capable", content: "yes" },
+    { name: "apple-mobile-web-app-capable", content: "yes" },
+    { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent" },
+    
+    // Theme Colors
+    { name: "theme-color", content: "#FF4500" },
+    { name: "msapplication-TileColor", content: "#FF4500" },
+    
+    // Canonical URL
+    { rel: "canonical", href: "https://apcelebrationtraders.com/contact" },
+    
+    // Breadcrumb Navigation
+    { name: "breadcrumb", content: "Home > Contact Us" },
+    
+    // Contact Page Specific Tags
+    { name: "page-type", content: "Contact Information Page" },
+    { name: "contact-purpose", content: "Business inquiries, product bookings, quotes, customer support" },
+    
+    // Emergency/Urgent Contact
+    { name: "urgent-contact", content: "Call +919359604441 for immediate assistance" },
+    { name: "quick-response", content: "WhatsApp +919359604441 for quick responses" },
+    
+    // Booking & Inquiry Tags
+    { name: "booking-methods", content: "Phone, WhatsApp, Email, In-person visit" },
+    { name: "quote-request", content: "Free quotes available for all celebration materials" },
+    { name: "consultation", content: "Expert consultation for event planning" },
+    
+    // Location-Based Contact
+    { name: "directions", content: "Near Chakor Bakery, Phutka Talav, Somvar Peth, Satara" },
+    { name: "parking", content: "Street parking available near store" },
+    { name: "accessibility", content: "Ground floor shop easily accessible" },
+    
+    // Response Time
+    { name: "response-time", content: "Quick response on phone and WhatsApp" },
+    { name: "availability", content: "Available for customer service and bookings" },
+    
+    // Rich Snippets Support
+    { name: "application-name", content: "A.P. Celebration Traders - Contact" },
+    { name: "msapplication-tooltip", content: "Contact Satara's trusted celebration materials supplier" },
+    
+    // Contact Page Keywords
+    { name: "contact-page-keywords", content: "fireworks store near me Satara, celebration materials shop contact, party supplies store phone number, cold pyro machine booking contact, wedding decoration contact Satara, birthday party supplies contact, corporate event contact, fireworks dealer contact Maharashtra, celebration materials store location, party equipment rental contact" },
+    
+    // Schema Markup Hints
+    { name: "schema-type", content: "LocalBusiness, ContactPoint" },
+    { name: "contact-type", content: "Customer Service, Sales, Booking" },
+    
+    // Call-to-Action Tags
+    { name: "primary-cta", content: "Call Now +919359604441" },
+    { name: "secondary-cta", content: "WhatsApp for Quick Response" },
+    { name: "tertiary-cta", content: "Visit Our Store in Satara" },
+    
+    // Service Area
+    { name: "service-area", content: "Satara, Maharashtra and surrounding areas" },
+    { name: "delivery-area", content: "Satara city and nearby locations" }
+  ];
+};
+
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({

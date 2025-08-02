@@ -29,11 +29,147 @@ import seasonal from "../assests/SeaSonal Products.png"
 import premimum from "../assests/Premium Kits.png"
 import caps from '../assests/Birthday Caps.png'
 import eyeMask from "../assests/Eye Mask.png"
-
+import type { MetaFunction } from "@remix-run/cloudflare";
 import img12Chanel from "../assests/12chane.jpeg";
 import imgFog from "../assests/fo.jpeg";
 import imgSparkular from "../assests/sparkula.jpeg";
 import imgConfetti from "../assests/confett.jpeg";
+
+export const meta: MetaFunction = () => {
+  return [
+    // Basic Meta Tags
+    { title: "Products - Cold Pyro Machines, CO2 Jets, Sparkular Guns & Party Supplies | A.P. Celebration Traders Satara" },
+    { name: "description", content: "Browse A.P. Celebration Traders' complete product range: 12-Channel Cold Pyro, CO2 Jet Machines, Sparkular Guns, Confetti Blasters, Color Smoke Cannons, Cash Cannons & premium party supplies in Satara." },
+    
+    // SEO Keywords
+    { name: "keywords", content: "cold pyro machine, 12 channel cold pyro, CO2 jet machine, sparkular guns, confetti blaster, color smoke cannons, cash cannon, bubble fog machine, party poppers, cake toppers, birthday caps, eye masks, plastic crowns, silver fountains, Ferrari cold pyro, cold pyro firing system, remote control pyro, color smoke cylinders, Indian currency note gloss, party balloons, hangers, dangler 3d butterfly, banners, seasonal products, premium kits, celebration materials catalog, fireworks products Satara, pyrotechnics equipment, party supplies inventory, wedding decoration materials, corporate event products, birthday party items, celebration equipment rental" },
+    
+    // Open Graph Tags
+    { property: "og:title", content: "Products - Cold Pyro, CO2 Jets & Party Supplies | A.P. Celebration Traders" },
+    { property: "og:description", content: "Explore our complete range of celebration products: Cold Pyro Machines, CO2 Jets, Sparkular Guns, Confetti Blasters & premium party supplies. Quality guaranteed!" },
+    { property: "og:type", content: "website" },
+    { property: "og:url", content: "https://apcelebrationtraders.com/products" },
+    { property: "og:image", content: "https://apcelebrationtraders.com/images/products-showcase-ap-celebration.jpg" },
+    { property: "og:image:width", content: "1200" },
+    { property: "og:image:height", content: "630" },
+    { property: "og:site_name", content: "A.P. Celebration Traders" },
+    { property: "og:locale", content: "en_IN" },
+    
+    // Twitter Card Tags
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "Products - Cold Pyro, CO2 Jets & Party Supplies | A.P. Celebration Traders" },
+    { name: "twitter:description", content: "Explore our complete range of celebration products: Cold Pyro Machines, CO2 Jets, Sparkular Guns & premium party supplies. Quality guaranteed!" },
+    { name: "twitter:image", content: "https://apcelebrationtraders.com/images/products-showcase-ap-celebration.jpg" },
+    
+    // Additional SEO Tags
+    { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+    { name: "language", content: "en-IN" },
+    { name: "revisit-after", content: "3 days" },
+    { name: "author", content: "A.P. Celebration Traders" },
+    { name: "copyright", content: "A.P. Celebration Traders" },
+    { name: "distribution", content: "global" },
+    { name: "rating", content: "general" },
+    
+    // Geographic Tags
+    { name: "geo.region", content: "IN-MH" },
+    { name: "geo.placename", content: "Satara, Maharashtra" },
+    { name: "geo.position", content: "17.6805;74.0183" },
+    { name: "ICBM", content: "17.6805, 74.0183" },
+    
+    // Business Contact Information
+    { name: "business:contact_data:street_address", content: "Shop No. 5, Near chakor bakery, phutka talav somvar peth" },
+    { name: "business:contact_data:locality", content: "Satara" },
+    { name: "business:contact_data:region", content: "Maharashtra" },
+    { name: "business:contact_data:postal_code", content: "415001" },
+    { name: "business:contact_data:country_name", content: "India" },
+    { name: "business:contact_data:phone_number", content: "+919359604441" },
+    { name: "business:contact_data:email", content: "apcelebrationtrender01@gmail.com" },
+    
+    // Product Categories
+    { name: "product-categories", content: "Cold Pyro Systems, CO2 Effects, Sparkular Equipment, Confetti Systems, Smoke Effects, Party Supplies, Birthday Decorations, Wedding Materials, Corporate Event Equipment" },
+    { name: "main-products", content: "12-Channel Cold Pyro, CO2 Jet Machine, Sparkular Guns, Confetti Blaster, Color Smoke Cannons, Cash Cannon, Bubble Fog Machine" },
+    { name: "party-supplies", content: "Party Balloons, Cake Toppers, Birthday Caps, Eye Masks, Plastic Crowns, Party Poppers, Banners, Danglers" },
+    
+    // Product Features
+    { name: "cold-pyro-features", content: "Remote control, 12-channel system, Ferrari cold pyro, firing stands, assorted products" },
+    { name: "special-effects", content: "CO2 jets, color smoke, silver fountains, bubble fog, confetti blasting" },
+    { name: "decoration-items", content: "3D butterfly danglers, seasonal products, premium kits, Indian currency note gloss" },
+    
+    // Inventory & Availability
+    { name: "product-availability", content: "In-stock celebration materials, rental equipment available, wholesale quantities" },
+    { name: "inventory-status", content: "Wide range of celebration products always in stock" },
+    { name: "bulk-orders", content: "Wholesale quantities available for bulk orders" },
+    
+    // Mobile Optimization
+    { name: "viewport", content: "width=device-width, initial-scale=1, shrink-to-fit=no" },
+    { name: "format-detection", content: "telephone=yes" },
+    { name: "mobile-web-app-capable", content: "yes" },
+    { name: "apple-mobile-web-app-capable", content: "yes" },
+    { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent" },
+    
+    // Theme Colors
+    { name: "theme-color", content: "#FF4500" },
+    { name: "msapplication-TileColor", content: "#FF4500" },
+    
+    // Canonical URL
+    { rel: "canonical", href: "https://apcelebrationtraders.com/products" },
+    
+    // Breadcrumb Navigation
+    { name: "breadcrumb", content: "Home > Products" },
+    
+    // Product Page Specific Tags
+    { name: "page-type", content: "Product Catalog Page" },
+    { name: "catalog-size", content: "Extensive range of celebration materials and equipment" },
+    
+    // Quality & Certification
+    { name: "product-quality", content: "Certified celebration materials, tested pyrotechnic equipment" },
+    { name: "safety-standards", content: "All products meet safety standards and regulations" },
+    { name: "quality-assurance", content: "Premium quality celebration materials guaranteed" },
+    
+    // Local Business Tags
+    { name: "local-business-type", content: "Celebration Materials and Equipment Supplier" },
+    { name: "local-business-category", content: "Party Supplies, Fireworks, Event Equipment, Decoration Materials" },
+    { name: "service-type", content: "Retail and Wholesale celebration products" },
+    
+    // Event-Specific Products
+    { name: "birthday-products", content: "Birthday caps, cake toppers, party balloons, decoration packages" },
+    { name: "wedding-products", content: "Cold pyro systems, fireworks, LED lighting, mandap materials" },
+    { name: "corporate-products", content: "Stage materials, AV equipment, branding supplies, professional effects" },
+    
+    // Equipment Rental
+    { name: "rental-equipment", content: "Cold pyro machines, CO2 jets, sound systems, lighting equipment available for rent" },
+    { name: "booking-products", content: "Equipment booking available for events and celebrations" },
+    
+    // Rich Snippets Support
+    { name: "application-name", content: "A.P. Celebration Traders - Products" },
+    { name: "msapplication-tooltip", content: "Browse celebration materials and party equipment catalog" },
+    
+    // Product Search Keywords
+    { name: "product-search-terms", content: "cold pyro machine price, CO2 jet machine rental, sparkular guns booking, confetti blaster hire, color smoke cannon price, cash cannon rental, bubble fog machine cost, party supplies catalog, celebration equipment list, fireworks products Satara, pyrotechnic equipment suppliers, party decoration materials, wedding celebration products, birthday party supplies, corporate event equipment" },
+    
+    // Schema Markup Hints
+    { name: "schema-type", content: "Product, ProductCollection, LocalBusiness" },
+    { name: "product-schema", content: "Individual products with prices, availability, descriptions" },
+    
+    // Pricing & Purchase Information
+    { name: "pricing-info", content: "Competitive prices, wholesale rates available, rental options" },
+    { name: "purchase-options", content: "Buy, rent, or book celebration equipment and materials" },
+    { name: "payment-methods", content: "Multiple payment options accepted" },
+    
+    // Technical Specifications
+    { name: "technical-products", content: "12-channel cold pyro firing systems, remote control pyrotechnics, professional grade equipment" },
+    { name: "product-specifications", content: "Detailed specifications available for all technical equipment" },
+    
+    // Long-tail Product Keywords
+    { name: "long-tail-product-keywords", content: "best cold pyro machine in Satara, CO2 jet machine rental prices, sparkular guns for wedding, confetti blaster booking Maharashtra, color smoke cannon effects, professional pyrotechnic equipment, premium party supplies catalog, celebration materials wholesale prices, birthday decoration packages, wedding fireworks products, corporate event equipment rental, party supplies near me Satara" },
+    
+    // Customer Benefits
+    { name: "product-benefits", content: "Wide selection, competitive prices, quality guaranteed, expert guidance, quick delivery" },
+    { name: "customer-advantages", content: "One-stop shop for all celebration needs, professional equipment, certified products" }
+  ];
+};
+
+
 export default function ProductsPage() {
   const [isVisible, setIsVisible] = useState(false)
   const [filter, setFilter] = useState("all")
