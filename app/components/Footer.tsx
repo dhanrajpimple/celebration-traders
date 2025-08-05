@@ -112,25 +112,20 @@ export default function Footer() {
             </h4>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/share/1751U2Rnfr/"
                 className="bg-red-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-red-700 transition transform hover:scale-110"
               >
                 <Facebook className="w-5 h-5 text-white" />
               </a>
+              
               <a
-                href="#"
-                className="bg-red-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-red-700 transition transform hover:scale-110"
-              >
-                <Twitter className="w-5 h-5 text-white" />
-              </a>
-              <a
-                href="#"
+                href="https://www.instagram.com/ap_celebration_traders?igsh=eHAyMzh2YWw4ZGhp"
                 className="bg-red-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-red-700 transition transform hover:scale-110"
               >
                 <Instagram className="w-5 h-5 text-white" />
               </a>
               <a
-                href="#"
+                href="https://youtube.com/@aniketpimpale585?si=FZEr9b-8q1HSnIQk"
                 className="bg-red-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-red-700 transition transform hover:scale-110"
               >
                 <Youtube className="w-5 h-5 text-white" />

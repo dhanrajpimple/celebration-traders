@@ -339,7 +339,7 @@ export default function ContactPage() {
             <div
               className={`text-center transition-all duration-700 delay-400 ${isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"}`}
             >
-              <a href="https://www.google.com/maps?q=17.67959,73.99093" target="_blank" rel="noopener noreferrer" className="block group">
+              <a href="https://maps.app.goo.gl/rtJi8xN2YteosCG58" target="_blank" rel="noopener noreferrer" className="block group">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4 hover:bg-orange-200 transition-colors duration-300 animate-float group-hover:scale-110 transform">
                   <svg className="w-8 h-8 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
                     <path
