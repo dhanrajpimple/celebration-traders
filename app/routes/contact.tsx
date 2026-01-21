@@ -18,8 +18,6 @@ export const meta: MetaFunction = () => {
     { name: "geo.region", content: "IN-MH" },
     { name: "geo.placename", content: "Satara, Maharashtra" },
 
-    // Mobile Optimization
-    { name: "viewport", content: "width=device-width, initial-scale=1, shrink-to-fit=no" },
     { name: "format-detection", content: "telephone=yes" },
 
     // Canonical URL
