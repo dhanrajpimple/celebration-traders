@@ -21,7 +21,7 @@ export const meta: MetaFunction = () => {
     { name: "format-detection", content: "telephone=yes" },
 
     // Canonical URL
-    { rel: "canonical", href: "https://apcelebrationtraders.com/contact" },
+    { rel: "canonical", href: "https://apcelebrationtraders.in/contact" },
 
     // Call-to-Action Tags
     { name: "primary-cta", content: "Call Now +919359604441" },

@@ -21,8 +21,8 @@ export const meta: MetaFunction = () => {
     { property: "og:title", content: "A.P. Celebration Traders - Best Firecrackers & Party Supplies in Satara District" },
     { property: "og:description", content: "Satara District's trusted supplier of firecrackers, mask machines, cold pyro, and party supplies. Complete celebration solutions for weddings & events." },
     { property: "og:type", content: "website" },
-    { property: "og:url", content: "https://apcelebrationtraders.com" },
-    { property: "og:image", content: "https://apcelebrationtraders.com/images/ap-celebration-og-image.jpg" },
+    { property: "og:url", content: "https://apcelebrationtraders.in" },
+    { property: "og:image", content: "https://apcelebrationtraders.in/images/ap-celebration-og-image.jpg" },
     { property: "og:image:width", content: "1200" },
     { property: "og:image:height", content: "630" },
     { property: "og:site_name", content: "A.P. Celebration Traders" },
@@ -32,7 +32,7 @@ export const meta: MetaFunction = () => {
     { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:title", content: "A.P. Celebration Traders - Premium Firecrackers & Party Supplies in Satara District" },
     { name: "twitter:description", content: "Satara District's best for firecrackers, mask machines, and celebration materials." },
-    { name: "twitter:image", content: "https://apcelebrationtraders.com/images/ap-celebration-twitter-image.jpg" },
+    { name: "twitter:image", content: "https://apcelebrationtraders.in/images/ap-celebration-twitter-image.jpg" },
 
     // Additional SEO Tags
     { name: "robots", content: "index, follow" },

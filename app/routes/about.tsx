@@ -20,7 +20,7 @@ export const meta: MetaFunction = () => {
     { name: "geo.placename", content: "Satara, Maharashtra" },
 
     // Canonical URL
-    { rel: "canonical", href: "https://apcelebrationtraders.com/about" }
+    { rel: "canonical", href: "https://apcelebrationtraders.in/about" }
   ];
 };
 
