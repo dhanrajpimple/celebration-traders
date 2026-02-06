@@ -1,7 +1,11 @@
 import { useEffect, useRef, useState } from "react"
 import { Link, useLocation } from "@remix-run/react"
 
-export default function FAQ() {
+interface FAQProps {
+  city?: string;
+}
+
+export default function FAQ({ city }: FAQProps) {
   const [isVisible, setIsVisible] = useState(false)
   const [openFAQ, setOpenFAQ] = useState<number | null>(0)
   const sectionRef = useRef<HTMLElement>(null)
@@ -23,6 +27,8 @@ export default function FAQ() {
     return () => observer.disconnect()
   }, [])
 
+  const cityToUse = city || "Satara"
+
   const faqs = [
     {
       question: "What types of firecrackers and celebration materials do you offer?",
@@ -37,12 +43,12 @@ export default function FAQ() {
     {
       question: "How can I place an order?",
       answer:
-        "You can visit our store in Satara, call us, or contact us through our website to place an order. We offer both retail and wholesale options.",
+        `You can visit our store in ${cityToUse}, call us, or contact us through our website to place an order. We offer both retail and wholesale options.`,
     },
     {
-      question: "Do you provide delivery in Satara and nearby cities?",
+      question: `Do you provide delivery in ${cityToUse} and nearby cities?`,
       answer:
-        "Yes, we offer delivery services in Satara and surrounding areas. Delivery charges may apply based on location and order size.",
+        `Yes, we offer delivery services in ${cityToUse} and surrounding areas. Delivery charges may apply based on location and order size.`,
     },
     {
       question: "What payment methods do you accept?",
@@ -81,9 +87,8 @@ export default function FAQ() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className={`bg-white rounded-2xl shadow-lg transition-all duration-500 hover:shadow-xl ${
-                  isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
-                }`}
+                className={`bg-white rounded-2xl shadow-lg transition-all duration-500 hover:shadow-xl ${isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
+                  }`}
                 style={{ animationDelay: `${index * 0.1 + 0.3}s` }}
               >
                 <button
@@ -92,9 +97,8 @@ export default function FAQ() {
                 >
                   <h3 className="text-xl font-bold text-gray-900 pr-4 font-heading">{faq.question}</h3>
                   <svg
-                    className={`w-6 h-6 text-red-600 transition-transform duration-300 flex-shrink-0 ${
-                      openFAQ === index ? "rotate-180" : ""
-                    }`}
+                    className={`w-6 h-6 text-red-600 transition-transform duration-300 flex-shrink-0 ${openFAQ === index ? "rotate-180" : ""
+                      }`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -103,9 +107,8 @@ export default function FAQ() {
                   </svg>
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    openFAQ === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                  }`}
+                  className={`overflow-hidden transition-all duration-300 ${openFAQ === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                    }`}
                 >
                   <div className="px-8 pb-6">
                     <p className="text-lg text-gray-600 leading-relaxed font-text">{faq.answer}</p>

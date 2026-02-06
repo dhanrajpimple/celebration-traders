@@ -22,7 +22,7 @@ export const meta: MetaFunction = () => {
     { property: "og:description", content: "Satara District's trusted supplier of firecrackers, mask machines, cold pyro, and party supplies. Complete celebration solutions for weddings & events." },
     { property: "og:type", content: "website" },
     { property: "og:url", content: "https://apcelebrationtraders.in" },
-    { property: "og:image", content: "https://apcelebrationtraders.in/images/ap-celebration-og-image.jpg" },
+    { property: "og:image", content: "https://apcelebrationtraders.in/assets/logo1.png" },
     { property: "og:image:width", content: "1200" },
     { property: "og:image:height", content: "630" },
     { property: "og:site_name", content: "A.P. Celebration Traders" },

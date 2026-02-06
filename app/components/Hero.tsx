@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react"
 import video from "../assests/bg.mp4"
-export default function Hero() {
+interface HeroProps {
+  title?: string;
+}
+
+export default function Hero({ title }: HeroProps) {
   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
@@ -19,7 +23,7 @@ export default function Hero() {
         playsInline
       />
 
-    
+
 
       {/* Floating particles effect */}
       <div className="absolute inset-0">
@@ -48,8 +52,13 @@ export default function Hero() {
           <h1
             className={`text-6xl md:text-8xl font-bold mb-6 tracking-wider transition-all duration-1000 delay-300 ${isLoaded ? "animate-fade-in-up" : "opacity-0"} font-heading`}
           >
-           A. P. Celebration Traders
+            A. P. Celebration Traders
           </h1>
+          {title && (
+            <h2 className={`text-3xl md:text-5xl font-bold mb-6 tracking-wider text-red-500 transition-all duration-1000 delay-500 ${isLoaded ? "animate-fade-in-up" : "opacity-0"} font-heading`}>
+              {title}
+            </h2>
+          )}
           <p
             className={`text-xl md:text-2xl font-light tracking-wide max-w-2xl mx-auto transition-all duration-1000 delay-500 ${isLoaded ? "animate-fade-in-up" : "opacity-0"} font-text`}
           >
@@ -58,7 +67,7 @@ export default function Hero() {
           <div
             className={`mt-8 transition-all duration-1000 delay-700 ${isLoaded ? "animate-fade-in-up" : "opacity-0"}`}
           >
-           
+
           </div>
         </div>
       </div>

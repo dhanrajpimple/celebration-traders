@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import shop from "../assests/35.jpg"
+import shop from "../assests/35.webp"
 export default function About() {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)

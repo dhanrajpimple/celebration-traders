@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import type { MetaFunction } from "@remix-run/cloudflare";
 import Header from "~/components/Header"
 import Footer from "~/components/Footer"
-import shop from "../assests/35.jpg"
+import shop from "../assests/35.webp"
 import owner from "../assests/owner.jpg"
 import video from "../assests/bg.mp4"
 

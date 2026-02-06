@@ -3,36 +3,36 @@ import Header from "~/components/Header"
 import Footer from "~/components/Footer"
 import { Link } from "@remix-run/react"
 import video from "../assests/bg.mp4"
-import event from "../assests/event.jpg"
-import one from "../assests/1.png"
-import second from "../assests/2.png"
-import third from "../assests/3.png"
-import fourth from "../assests/4.png"
-import five from "../assests/5.png"
-import six from "../assests/6.png"
-import party from "../assests/party.jpg"
-import wedding from "../assests/wedd.jpg"
-import img12 from "../assests/12.jpg";
-import img14 from "../assests/14.jpg";
-import img15 from "../assests/15.jpg";
-import img16 from "../assests/16.jpg";
-import img21 from "../assests/21.jpg";
-import img25 from "../assests/25.jpg";
-import img26 from "../assests/26.jpg";
-import img29 from "../assests/29.jpg";
-import img30 from "../assests/30.jpg";
-import img32 from "../assests/32.jpg";
-import img34 from "../assests/34.jpg";
+import event from "../assests/event.webp"
+import one from "../assests/1.webp"
+import second from "../assests/2.webp"
+import third from "../assests/3.webp"
+import fourth from "../assests/4.webp"
+import five from "../assests/5.webp"
+import six from "../assests/6.webp"
+import party from "../assests/party.webp"
+import wedding from "../assests/wedd.webp"
+import img12 from "../assests/12.webp";
+import img14 from "../assests/14.webp";
+import img15 from "../assests/15.webp";
+import img16 from "../assests/16.webp";
+import img21 from "../assests/21.webp";
+import img25 from "../assests/25.webp";
+import img26 from "../assests/26.webp";
+import img29 from "../assests/29.webp";
+import img30 from "../assests/30.webp";
+import img32 from "../assests/32.webp";
+import img34 from "../assests/34.webp";
 import imgCo2 from "../assests/co.jpeg";
 import baner from "../assests/Banner.png"
 import seasonal from "../assests/SeaSonal Products.png"
-import premimum from "../assests/Premium Kits.png"
+import premimum from "../assests/Premium Kits.webp"
 import caps from '../assests/Birthday Caps.png'
-import eyeMask from "../assests/Eye Mask.png"
+import eyeMask from "../assests/Eye Mask.webp"
 import type { MetaFunction } from "@remix-run/cloudflare";
-import img12Chanel from "../assests/12chane.jpeg";
-import imgFog from "../assests/fo.jpeg";
-import imgSparkular from "../assests/sparkula.jpeg";
+import img12Chanel from "../assests/12chane.webp";
+import imgFog from "../assests/fo.webp";
+import imgSparkular from "../assests/sparkula.webp";
 import imgConfetti from "../assests/confett.jpeg";
 
 export const meta: MetaFunction = () => {

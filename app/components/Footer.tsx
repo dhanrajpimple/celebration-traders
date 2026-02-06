@@ -151,7 +151,7 @@ export default function Footer() {
 
       {/* Bottom Line */}
       <div className="border-t border-gray-800 text-center py-4 text-sm text-gray-500">
-        Designed & Developed by ME
+        Designed & Developed by +91-7219111601
       </div>
     </footer>
   )

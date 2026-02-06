@@ -20,9 +20,8 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${
-        isScrolled ? "bg-black/90 shadow-lg backdrop-blur-md" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${isScrolled ? "bg-black/90 shadow-lg backdrop-blur-md" : "bg-transparent"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
@@ -39,25 +38,58 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-10">
+          <nav className="hidden md:flex space-x-10 items-center">
             {[
               { label: "HOME", path: "/" },
               { label: "ABOUT US", path: "/about" },
+              {
+                label: "SERVICE AREAS",
+                path: "#",
+                children: [
+                  { label: "Satara", path: "/celebration-material-satara" },
+                  { label: "Pune", path: "/celebration-material-pune" },
+                  { label: "Baramati", path: "/celebration-material-baramati" },
+                  { label: "Kolhapur", path: "/celebration-material-kolhapur" },
+                  { label: "Sangli", path: "/celebration-material-sangli" },
+                  { label: "Solapur", path: "/celebration-material-solapur" },
+                ]
+              },
               { label: "CONTACT US", path: "/contact" },
               { label: "PRODUCTS", path: "/products" },
-            ].map(({ label, path }) => (
-              <Link
-                key={path}
-                to={path}
-                className={`relative font-medium text-sm uppercase tracking-wide transition-all duration-300 ${
-                  isActive(path) ? "text-red-500" : "text-white hover:text-red-500"
-                }`}
-              >
-                {label}
-                {isActive(path) && (
-                  <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-red-500 rounded-full" />
+            ].map((item) => (
+              <div key={item.label} className="relative group">
+                <Link
+                  to={item.path}
+                  className={`relative font-medium text-sm uppercase tracking-wide transition-all duration-300 flex items-center gap-1 ${isActive(item.path) ? "text-red-500" : "text-white hover:text-red-500"
+                    }`}
+                  onClick={(e) => {
+                    if (item.children) e.preventDefault();
+                  }}
+                >
+                  {item.label}
+                  {item.children && (
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                  )}
+                  {isActive(item.path) && !item.children && (
+                    <span className="absolute left-0 -bottom-1 h-0.5 w-full bg-red-500 rounded-full" />
+                  )}
+                </Link>
+
+                {/* Dropdown */}
+                {item.children && (
+                  <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left z-50">
+                    {item.children.map((child) => (
+                      <Link
+                        key={child.path}
+                        to={child.path}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600"
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
                 )}
-              </Link>
+              </div>
             ))}
           </nav>
 
@@ -84,27 +116,55 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out transform ${
-          isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out transform ${isMenuOpen ? "max-h-[32rem] opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <div className="bg-black/95 backdrop-blur-sm border-t border-red-600/30 py-6 px-4 space-y-4">
           {[
             { label: "HOME", path: "/" },
             { label: "ABOUT US", path: "/about" },
+            {
+              label: "SERVICE AREAS",
+              path: "#",
+              children: [
+                { label: "Satara", path: "/celebration-material-satara" },
+                { label: "Pune", path: "/celebration-material-pune" },
+                { label: "Baramati", path: "/celebration-material-baramati" },
+                { label: "Kolhapur", path: "/celebration-material-kolhapur" },
+                { label: "Sangli", path: "/celebration-material-sangli" },
+                { label: "Solapur", path: "/celebration-material-solapur" },
+              ]
+            },
             { label: "CONTACT US", path: "/contact" },
             { label: "PRODUCTS", path: "/products" },
-          ].map(({ label, path }) => (
-            <Link
-              key={path}
-              to={path}
-              className={`block text-sm font-medium uppercase tracking-wide transition-colors duration-300 ${
-                isActive(path) ? "text-red-500" : "text-white hover:text-red-500"
-              }`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {label}
-            </Link>
+          ].map((item) => (
+            <div key={item.label}>
+              <Link
+                to={item.path}
+                className={`block text-sm font-medium uppercase tracking-wide transition-colors duration-300 ${isActive(item.path) ? "text-red-500" : "text-white hover:text-red-500"
+                  }`}
+                onClick={(e) => {
+                  if (!item.children) setIsMenuOpen(false);
+                  else e.preventDefault();
+                }}
+              >
+                {item.label}
+              </Link>
+              {item.children && (
+                <div className="pl-4 mt-2 space-y-2 border-l border-red-500/30">
+                  {item.children.map((child) => (
+                    <Link
+                      key={child.path}
+                      to={child.path}
+                      className={`block text-xs font-medium uppercase tracking-wide transition-colors duration-300 text-gray-300 hover:text-red-500`}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </div>
       </div>
