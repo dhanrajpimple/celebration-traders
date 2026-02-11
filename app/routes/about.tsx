@@ -9,11 +9,14 @@ import video from "../assests/bg.mp4"
 export const meta: MetaFunction = () => {
   return [
     // Basic Meta Tags
-    { title: "About A.P. Celebration Traders | Leading Fireworks Supplier in Satara District" },
-    { name: "description", content: "Learn about A.P. Celebration Traders - Satara District's most trusted celebration materials supplier. Years of experience in firecrackers, mask machines, cold pyro & wedding decor." },
+    { title: "About A.P. Celebration Traders | Leading Celebration Materials & Fireworks Supplier" },
+    { name: "description", content: "Discover A.P. Celebration Traders, the premier supplier of celebration materials, cold pyro, and firecrackers in Satara. Delivering quality event supplies across Maharashtra." },
 
-    // SEO Keywords
-    { name: "keywords", content: "about AP Celebration Traders, fireworks supplier Satara District, celebration materials Satara, trusted fireworks dealer Maharashtra, mask machine supplier Satara" },
+    // SEO Keywords - Short Tail, Long Tail, High Rank
+    { name: "keywords", content: "about AP Celebration Traders, fireworks supplier Satara, celebration materials distributor, party supplies wholesale Maharashtra, mask machine supplier, event decor expert" },
+
+    // Long-tail & High Rank Keywords
+    { name: "long-tail-keywords", content: "trusted fireworks dealer in Satara District, professional stage effects provider, wedding celebration materials wholesale, best firecrackers shop in Maharashtra, leader in sfx celebration tools" },
 
     // Geographic Tags
     { name: "geo.region", content: "IN-MH" },

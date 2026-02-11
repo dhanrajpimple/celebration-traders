@@ -1,8 +1,9 @@
 import type { MetaFunction } from "@remix-run/cloudflare";
 
 export const meta: MetaFunction = () => [
-  { title: "Privacy Policy | AP Celebration Trader" },
-  { name: "description", content: "Read the privacy policy for AP Celebration Trader's website and services." },
+  { title: "Privacy Policy | AP Celebration Trader | Celebration Materials & Fireworks" },
+  { name: "description", content: "Details on how AP Celebration Trader handles your data. Your privacy is important to us as your trusted celebration partner." },
+  { name: "keywords", content: "privacy policy, AP Celebration Trader, data protection, Satara fireworks shop privacy" },
 ];
 
 export default function PolicyPage() {

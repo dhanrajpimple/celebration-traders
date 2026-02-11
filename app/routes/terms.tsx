@@ -1,8 +1,9 @@
 import type { MetaFunction } from "@remix-run/cloudflare";
 
 export const meta: MetaFunction = () => [
-  { title: "Terms of Use | AP Celebration Trader" },
-  { name: "description", content: "Read the terms of use for AP Celebration Trader's website and services." },
+  { title: "Terms of Use & Safety | AP Celebration Trader" },
+  { name: "description", content: "Terms of service and safety guidelines for using products and services from AP Celebration Trader, Satara." },
+  { name: "keywords", content: "terms of use, safety guidelines, firecrackers safety, celebration materials terms, Satara shop terms" },
 ];
 
 export default function TermsPage() {

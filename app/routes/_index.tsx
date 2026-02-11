@@ -14,8 +14,11 @@ export const meta: MetaFunction = () => {
     { title: "A.P. Celebration Traders | Best Celebration Materials & Firecrackers in Satara District" },
     { name: "description", content: "A.P. Celebration Traders - Satara District's leading supplier of firecrackers, mask machines, cold pyro, birthday & wedding supplies. Wholesale & retail available. Quality celebration materials for all events." },
 
-    // SEO Keywords
-    { name: "keywords", content: "firecrackers Satara District, mask machine Satara, cold pyro machine, celebration materials Satara, birthday party supplies Satara, wedding decorations Satara, Somvar Peth Satara, Chakor Bakery Satara, Phutka Talav Satara, AP Celebration Trader" },
+    // SEO Keywords - Short Tail, Long Tail, High Rank
+    { name: "keywords", content: "celebration materials, firecrackers Satara, mask machine, cold pyro, party supplies, wedding decorations, birthday items, stage special effects, event decor, sparkling candles, CO2 jets, confetti blasters, gender reveal smoke, dry ice fog machine, electric crackers, remote control fireworks" },
+
+    // Long-tail Keywords for Better Ranking
+    { name: "long-tail-keywords", content: "best celebration material shop in Satara, wholesale fireworks dealer in Maharashtra, wedding cold pyro machine price, birthday decoration material wholesale market, event management materials supplier, stage effects for weddings Satara, buy cold pyro online India, electronic crackers for events" },
 
     // Open Graph Tags
     { property: "og:title", content: "A.P. Celebration Traders - Best Firecrackers & Party Supplies in Satara District" },
@@ -50,10 +53,7 @@ export const meta: MetaFunction = () => {
     { name: "locality", content: "Satara" },
     { name: "region", content: "Maharashtra" },
     { name: "country", content: "India" },
-    { name: "district", content: "Satara District" },
-
-    // Long-tail Keywords for Better Ranking
-    { name: "long-tail-keywords", content: "best fireworks shop in Satara District, mask machine for party Satara, cold pyro machine dealer Satara, birthday party decorations Satara city, wholesale celebration materials Satara" }
+    { name: "district", content: "Satara District" }
   ];
 };
 

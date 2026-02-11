@@ -8,11 +8,14 @@ import type { MetaFunction } from "@remix-run/cloudflare";
 export const meta: MetaFunction = () => {
   return [
     // Basic Meta Tags
-    { title: "Contact A.P. Celebration Traders | Call +919359604441 | Best Fireworks Store in Satara District" },
-    { name: "description", content: "Contact A.P. Celebration Traders in Satara District for firecrackers, mask machines & celebration materials. Call +919359604441 or visit our store near Chakor Bakery. Best party supplies in Satara." },
+    { title: "Contact A.P. Celebration Traders | Best Selection of Celebration Materials & Fireworks" },
+    { name: "description", content: "Contact A.P. Celebration Traders for all your celebration material needs. Best rates on firecrackers, party supplies, and stage effects in Satara District. Call +919359604441." },
 
-    // SEO Keywords
-    { name: "keywords", content: "contact AP Celebration Traders, fireworks store Satara District, celebration materials shop phone number, party supplies Satara, cold pyro machine booking, mask machine Satara, fireworks dealer Satara" },
+    // SEO Keywords - Short Tail, Long Tail, High Rank
+    { name: "keywords", content: "contact A.P. Celebration Traders, buy celebration materials Satara, firecrackers near me, party supply shop Satara, cold pyro booking, birthday items shop, wedding decor supplier" },
+
+    // Intent-based Long Tail Keywords
+    { name: "long-tail-keywords", content: "where to buy celebration materials in Satara, best firecrackers wholesale shop contact, urgent party supplies delivery Satara, event fireworks booking phone number" },
 
     // Geographic Tags
     { name: "geo.region", content: "IN-MH" },
@@ -25,7 +28,7 @@ export const meta: MetaFunction = () => {
 
     // Call-to-Action Tags
     { name: "primary-cta", content: "Call Now +919359604441" },
-    { name: "secondary-cta", content: "WhatsApp for Quick Response" }
+    { name: "secondary-cta", content: "WhatsApp for Celebration Materials" }
   ];
 };
 

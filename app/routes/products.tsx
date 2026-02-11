@@ -41,8 +41,14 @@ export const meta: MetaFunction = () => {
     { title: "Products - Cold Pyro, CO2 Jets, Mask Machines & Celebration Materials | A.P. Celebration Traders Satara District" },
     { name: "description", content: "Explore A.P. Celebration Traders' products in Satara District: Cold Pyro, CO2 Jets, Mask Machines, Sparkular Guns & party supplies. Best quality celebration materials." },
 
-    // SEO Keywords
-    { name: "keywords", content: "celebration materials Satara District, cold pyro machine Satara, mask machine Satara, CO2 jet Satara, party supplies Satara, fireworks products Satara" },
+    // Short Tail Keywords
+    { name: "keywords", content: "celebration materials, cold pyro machine, CO2 jet, confetti blaster, sparkular gun, color smoke, birthday caps, party balloons, cake toppers, snow spray, party poppers, event fireworks" },
+
+    // Long Tail Keywords
+    { name: "long-tail-keywords", content: "buy cold pyro machine online India, CO2 fog machine for weddings price, electronic crackers for events, remote control fireworks system, stage decoration items wholesale, party smoke machine rental Satara, wedding entry special effects" },
+
+    // High Rank Keywords
+    { name: "high-rank-keywords", content: "wedding special effects, concert stage effects, event pyrotechnics, bridal entry fireworks, stage cold sparks, dry ice fog effect" },
 
     // Geographic Tags
     { name: "geo.region", content: "IN-MH" },

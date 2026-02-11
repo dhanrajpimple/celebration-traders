@@ -25,11 +25,11 @@ export const links: LinksFunction = () => [
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "AP Celebration Trader | Best Firecrackers & Celebration Materials in Satara District" },
-    { name: "description", content: "AP Celebration Trader is the #1 supplier of firecrackers, cold pyro, party supplies, and celebration materials in Satara District. Exclusive range of mask machines, sparks, and wedding decor." },
-    { name: "keywords", content: "firecrackers Satara, celebration materials Satara district, cold pyro Satara, party supplies Satara, mask machine Satara, AP Celebration Trader, fireworks wholesale Satara, wedding materials Satara" },
-    { property: "og:title", content: "AP Celebration Trader | Firecrackers & Celebration Materials in Satara District" },
-    { property: "og:description", content: "Quality firecrackers, cold pyro, and party supplies in Satara District. Wholesale and retail celebration materials for weddings, birthdays, and events." },
+    { title: "AP Celebration Trader | #1 Celebration Materials & Firecrackers Supplier" },
+    { name: "description", content: "AP Celebration Trader - Leading distributor of celebration materials, firecrackers, cold pyro, and party supplies. Best quality and wholesale rates for event decor." },
+    { name: "keywords", content: "celebration materials, firecrackers, cold pyro, party supplies, wedding decor, mask machine, event special effects, AP Celebration Trader, fireworks wholesale" },
+    { property: "og:title", content: "AP Celebration Trader | Best Celebration Materials & Fireworks" },
+    { property: "og:description", content: "Premium celebration materials, cold pyro, and firecrackers. Wholesale and retail event supplies for weddings, birthdays, and festivals." },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: "en_IN" },
   ];
